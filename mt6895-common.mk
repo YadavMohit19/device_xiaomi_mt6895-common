@@ -11,7 +11,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/generic_ramdisk.mk)
 
 # Include GSI keys
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
@@ -51,7 +51,6 @@ PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
     android.hardware.soundtrigger@2.3-impl \
     android.hardware.bluetooth.audio@2.1-impl \
-    audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
@@ -79,8 +78,7 @@ PRODUCT_PRODUCT_PROPERTIES += \
 # Bluetooth
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.1.vendor \
-    android.hardware.bluetooth.audio@2.0-impl \
-    android.hardware.bluetooth.audio@2.1-impl
+    android.hardware.bluetooth.audio-impl \
 
 # Boot control HAL
 PRODUCT_PACKAGES += \
@@ -389,4 +387,3 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.1.vendor
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/mt6895-common/mt6895-common-vendor.mk)

@@ -1160,3 +1160,29 @@ service charger /system/bin/charger
     #seclabel u:r:charger:s0
     group system graphics
     seclabel u:r:healthd:s0
+
+
+#debug logs#
+on post-fs-data 
+	rm /data/debug.logcat.txt
+
+service debug_kernel /system/bin/sh -c "cat /proc/kmsg > /data/debug.kernel.txt"
+    class main 
+    user root
+    oneshot
+
+service debug_logcat /system/bin/logcat -f /data/debug.logcat.txt -v threadtime *:E
+    class main 
+    user root
+    group system
+
+
+service debug_properties /system/bin/sh -c "getprop > /data/debug.properties.txt"
+    class main 
+    user root
+    oneshot
+
+service debug_roottree /system/bin/sh -c "ls -la / > /data/debug.roottree.txt"
+    class main 
+    user root
+    oneshot

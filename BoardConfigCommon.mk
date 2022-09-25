@@ -118,6 +118,7 @@ TARGET_BOARD_PLATFORM := mt6895
 
 # Properties
 TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
+TARGET_SYSTEM_EXT_PROP += $(COMMON_PATH)/system_ext.prop
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.mt6895
