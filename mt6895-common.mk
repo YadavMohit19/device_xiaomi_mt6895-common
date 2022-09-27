@@ -373,7 +373,12 @@ PRODUCT_PACKAGES += \
     android.hardware.vibrator-V1-ndk_platform.vendor
 
 # VNDK
-PRODUCT_EXTRA_VNDK_VERSIONS := 31
+PRODUCT_EXTRA_VNDK_VERSIONS := 31 32
+
+# VNDK
+PRODUCT_PACKAGES += \
+    prebuilts/vndk/v32/arm64/arch-arm-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libutils-v32.so \
+    prebuilts/vndk/v32/arm64/arch-arm64-armv8-a/shared/vndk-sp/libutils.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libutils-v32.so \
 
 # Wifi
 PRODUCT_PACKAGES += \
@@ -387,4 +392,7 @@ PRODUCT_PACKAGES += \
     android.hardware.usb@1.3.vendor \
     android.hardware.usb.gadget@1.1.vendor
 
-# Inherit the proprietary files
+# Keymaster
+PRODUCT_PACKAGES += \
+    android.hardware.keymaster@4.0-impl \
+    android.hardware.keymaster@4.0-service
