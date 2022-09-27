@@ -51,6 +51,14 @@ $(MT6895_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(MT6895_SYMLINK)
 
+MT6895_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so
+MT6895_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so
+$(MT6895_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@mkdir -p $(dir $@)
+	$(hide) ln -sf vendor.mediatek.hardware.pq@2.13-impl.so $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(MT6895_SYMLINK)
+
 AUDIO_PRIMARY_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/audio.primary.mt6895.so
 AUDIO_PRIMARY_SYMLINK += $(TARGET_OUT_VENDOR)/lib64/hw/audio.primary.mt6895.so
 $(AUDIO_PRIMARY_SYMLINK): $(LOCAL_INSTALLED_MODULE)
