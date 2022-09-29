@@ -188,6 +188,9 @@ PRODUCT_BOOT_JARS += \
 PRODUCT_PACKAGES += \
     libshim_vtservice
 
+PRODUCT_PACKAGES += \
+    ImsServiceBase
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-mediatek.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-mediatek.xml
 
@@ -389,4 +392,4 @@ PRODUCT_PACKAGES += \
     android.hardware.usb.gadget@1.1.vendor
 
 # Inherit the proprietary files
-$(call inherit-product, vendor/xiaomi/mt6895-common/mt6895-common-vendor.mk)
+#$(call inherit-product, vendor/xiaomi/mt6895-common/mt6895-common-vendor.mk)

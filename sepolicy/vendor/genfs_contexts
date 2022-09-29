@@ -30,6 +30,7 @@ genfscon sysfs /devices/platform/112b0000.ufshci/host0/target0:0:0/0:0:0:2/block
 genfscon sysfs /devices/platform/11270000.ufshci/host0/target0:0:0/0:0:0:0/block/sda u:object_r:sysfs_devices_block:s0
 genfscon sysfs /devices/platform/11270000.ufshci/host0/target0:0:0/0:0:0:1/block/sdb u:object_r:sysfs_devices_block:s0
 genfscon sysfs /devices/platform/11270000.ufshci/host0/target0:0:0/0:0:0:2/block/sdc u:object_r:sysfs_devices_block:s0
+genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-00/c440000.qcom,spmi:qcom,pm660@0:qcom,qpnp-smb2/power_supply/battery  u:object_r:sysfs_battery_supply:s0
 
 # Power supply
 genfscon sysfs /devices/platform/1000d000.pwrap/1000d000.pwrap:main_pmic/mt6357-charger-type-detection/power_supply/mtk_charger_type/wakeup u:object_r:sysfs_wakeup:s0
@@ -89,3 +90,4 @@ genfscon sysfs /devices/soc0  u:object_r:sysfs_soc:s0
 
 # USB PD
 genfscon sysfs /sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter u:object_r:sysfs_usbpd_device:s0
+
