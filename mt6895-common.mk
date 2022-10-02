@@ -349,8 +349,14 @@ PRODUCT_COPY_FILES += \
 
 # Sensor
 PRODUCT_PACKAGES += \
-    android.hardware.sensors@2.0-ScopedWakelock.vendor \
-    android.hardware.sensors@2.1.vendor \
+    android.hardware.sensors@2.0-ScopedWakelock.so \
+    android.hardware.sensors@2.0 \
+    android.hardware.sensors@2.1 \
+    libsensorndkbridge \
+    android.frameworks.sensorservice@1.0
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 31

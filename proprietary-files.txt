@@ -2249,3 +2249,4 @@ vendor/lib/hw/vendor.mediatek.hardware.pq@2.13-impl.so
 vendor/lib64/hw/vendor.mediatek.hardware.pq@2.13-impl.so
 vendor/lib/hw/mt6895/vendor.mediatek.hardware.pq@2.13-impl.so
 vendor/lib64/hw/mt6895/vendor.mediatek.hardware.pq@2.13-impl.so
+vendor/lib64/hw/sensors.mt6895.so
