@@ -2154,8 +2154,6 @@ vendor/bin/hw/android.hardware.secure_element@1.2-service-mediatek
 vendor/etc/init/android.hardware.secure_element@1.2-service-mediatek.rc
 
 # Sensors
-vendor/bin/hw/android.hardware.sensors@2.0-service.multihal-mediatek
-vendor/etc/init/android.hardware.sensors@2.0-service.multihal-mediatek.rc
 vendor/lib/hw/sensors.elliptic@2.0.so
 vendor/lib/libnotifyaudiohal.so
 vendor/lib/sensors.touch.detect.so
