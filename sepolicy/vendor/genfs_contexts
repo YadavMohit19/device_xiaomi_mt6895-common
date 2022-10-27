@@ -90,3 +90,6 @@ genfscon sysfs /devices/soc0  u:object_r:sysfs_soc:s0
 
 # USB PD
 genfscon sysfs /sys/devices/platform/pd_adapter/Charging_Adapter/pd_adapter u:object_r:sysfs_usbpd_device:s0
+
+#vibrator
+genfscon sysfs /kernel/thunderquake_engine/level       u:object_r:sysfs_vibrator:s0

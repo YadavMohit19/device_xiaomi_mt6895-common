@@ -31,4 +31,43 @@
     <!-- Enable Zram writeback feature to allow unused pages in zram be written to flash. -->
     <bool name="config_zramWriteback">true</bool>
 
+    <!-- The number of vibration intensity levels supported by the device.
+         Note that this should correspond to the ability to vary the vibration amplitude, with
+         enough dynamic range to have at least as many distinct intensity levels as defined here.
+         Supported values are 1, 2, 3. If '1', the settings app will use a toggle for the settings,
+         otherwise a slider. If '3', the settings app maps intensities directly to the levels
+         supported by the Vibrator HAL APIs. If '2', then the levels will be mapped to
+         VIBRATION_INTENSITY_LOW and VIBRATION_INTENSITY_HIGH, which gives the most range for
+         scaling vibrations. The medium intensity will be skipped.
+         The default intensity values are configured at
+         frameworks/base/core/res/res/values/config.xml's config_default[type]VibrationIntensity.
+         Make sure that each default intensity value is consistent with the supported levels set
+         here. If this settings supports only 2 levels, for example, then the default intensity
+         should be either LOW (1) or HIGH (3).
+    -->
+    <integer name="config_vibration_supported_intensity_levels">3</integer>
+
+    <!-- The default intensity level for haptic feedback. See
+         Settings.System.HAPTIC_FEEDBACK_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultHapticFeedbackIntensity">2</integer>
+
+    <!-- The default intensity level for notification vibrations. See
+         Settings.System.NOTIFICATION_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultNotificationVibrationIntensity">3</integer>
+
+    <!-- The default intensity level for notification vibrations. See
+         Settings.System.RING_VIBRATION_INTENSITY more details on the constant values and
+         meanings. -->
+    <integer name="config_defaultRingVibrationIntensity">3</integer>
+
+    <!-- The duration (in milliseconds) that should be applied to waveform vibrations that ends in
+         non-zero amplitudes, to bring the vibrator amplitude down to zero using this timing. -->
+    <integer name="config_vibrationWaveformRampDownDuration">50</integer>
+    <!-- Enables or disables haptic effect when the text insertion/selection handle is moved
+          manually by the user. Off by default, since the expected haptic feedback may not be
+          available on some devices. -->
+    <bool name="config_enableHapticTextHandle">true</bool>
+
 </resources>
